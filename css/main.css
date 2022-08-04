@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap");
+/* Font Awesome */
+/* Spacings */
+/* Font-family*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Hind', sans-serif; }
+
+.nav {
+  background-color: #131212ee;
+  height: 80px;
+  color: white; }
+  .nav__container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center; }
+  .nav__logo img {
+    padding: 5px 0px 0px 5px;
+    width: 100%;
+    height: 80px; }
+  .nav__menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em; }
+  .nav__item {
+    color: #fff;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+    .nav__item::after {
+      content: "";
+      display: block;
+      background: #fff;
+      width: 90%;
+      margin-top: 3px;
+      height: 3px;
+      clip-path: var(--clippy);
+      transition: clip-path .3s; }
+    .nav__item:hover {
+      --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  .nav__input:checked + .nav__menu {
+    background-color: tomato;
+    clip-path: circle(100% at center); }
+  .nav__label, .nav__input {
+    display: none; }
+
+/*:::::Pie de Pagina*/
+.footer__design {
+  width: 100%;
+  background-color: #ffffff; }
+
+.footer__design .footer__team {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px; }
+
+.footer__design .footer__team .footer__box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.footer__design .footer__team .footer__box figure img {
+  width: 250px; }
+
+.footer__design .footer__team .footer__box h2 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-transform: uppercase; }
+
+.footer__design .footer__team .footer__box p {
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 500; }
+
+.footer__design .footer__team .footer__box p {
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 500; }
+
+.footer__design .footer__team .footer__social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+  margin-right: 10px;
+  background-color: #ffffff;
+  text-align: center;
+  transition: all 300ms ease; }
+
+.footer__design .footer__team .footer__social a:hover {
+  color: #d4b816; }
+
+.footer__design .footer__team2 {
+  background-color: #16161460;
+  padding: 15px 10px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.699); }
+
+.footer__design .footer__team2 small {
+  font-size: 15px; }
+
+.main__banner {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  background-image: url("/img/vinoetiqueta.jpg");
+  animation: banner 28s infinite linear; }
+
+.main__banner-content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(0, 22, 40, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.main__banner-content h1 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  font-size: 40px;
+  text-align: center; }
+
+.main__banner-content a {
+  text-decoration: none;
+  color: #fff;
+  padding: 9px 20px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out; }
+
+.main__banner-content a:hover {
+  background-color: #fff;
+  color: #333; }
+
+@keyframes banner {
+  0% {
+    background-image: url("/img/vinoetiqueta.jpg"); }
+  25% {
+    background-image: url("/img/vinoetiqueta.jpg"); }
+  26% {
+    background-image: url("/img/BANNER-CORONA-1024x535.jpg"); }
+  50% {
+    background-image: url("/img//BANNER-CORONA-1024x535.jpg"); }
+  51% {
+    background-image: url("/img/licores.jpg"); }
+  75% {
+    background-image: url("/img/licores.jpg"); }
+  76% {
+    background-image: url("/img/wiskys2 copia.jpg"); }
+  100% {
+    background-image: url("/img/wiskys2 copia.jpg"); } }
+
+/* media para tablet */
+@media (max-width: 991px) {
+  .nav__label {
+    display: block;
+    cursor: pointer; }
+  .nav__menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #f08080;
+    width: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out; } }
+
+/* media para desktop */
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px; } }

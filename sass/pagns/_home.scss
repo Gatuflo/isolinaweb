@@ -1,0 +1,73 @@
+.main__banner {
+    position:relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url('/img/vinoetiqueta.jpg');
+    animation: banner 28s infinite linear;
+}
+
+.main__banner-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 22, 40, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__banner-content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main__banner-content a {
+    text-decoration: none;
+    color: #fff;
+    padding: 9px 20px;
+    border:  1px solid #fff;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+
+.main__banner-content a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@keyframes banner {
+    0% {
+        background-image: url('/img/vinoetiqueta.jpg');
+    }
+    25% {
+        background-image: url('/img/vinoetiqueta.jpg');
+    }
+    26% {
+        background-image: url('/img/BANNER-CORONA-1024x535.jpg');
+    }
+    50% {
+        background-image: url('/img//BANNER-CORONA-1024x535.jpg');
+    }
+    51% {
+        background-image: url('/img/licores.jpg');
+    }
+    75% {
+        background-image: url('/img/licores.jpg');
+    }
+    76% {
+        background-image: url('/img/wiskys2\ copia.jpg');
+    }
+    100% {
+        background-image: url('/img/wiskys2\ copia.jpg');
+    }
+}
