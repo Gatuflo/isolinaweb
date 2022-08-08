@@ -1,0 +1,153 @@
+.nav {
+    &_diseño {
+        background: #1b1b1b;
+    }
+    &_logo {
+        float: left;
+        color: #ffffff;
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 70px;
+        padding-left: 60px;
+    }
+    &_diseño:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    &_diseño ul {
+        float: right;
+        margin-right: 40px;
+        position: relative;
+    }
+    &_diseño ul li {
+        float: left;
+        display: inline-block;
+        background: #1b1b1b;
+        margin: 0 5px;
+    }
+    &_diseño ul li a {
+        color: #ffffff;
+        line-height: 70px;
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    &_diseño ul li a:hover {
+        border-radius: 5px;
+        box-shadow: 0 0 5px #33ffff,
+                    0 0 5px #66ffff;
+    }
+    &_diseño ul ul li a:hover {
+        color: #33ffff;
+        box-shadow: none;
+    }
+    &_diseño ul ul {
+        position: absolute;
+        top: 90px;
+        border-top: 3px solid #66ffff;
+        opacity: 0;
+        visibility: hidden;
+        transition: top .3s;
+    }
+    &_diseño ul ul ul {
+        border-top: none;
+    }
+    &_diseño ul li:hover > ul {
+        top: 70px;
+        opacity: 1;
+        visibility: visible;
+    }
+    &_diseño ul ul li {
+        position: relative;
+        margin: 0px;
+        width: 150px;
+        float: none;
+        display: list-item;
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    &_diseño ul ul li a {
+        line-height: 50px;
+    }
+    &_diseño ul ul ul li {
+        position: relative;
+        top: -70px;
+        left: 150px;
+    } 
+    &_ajuste span {
+        padding-left: 15px;
+    }
+}
+
+.nav_media, .nav_icon, input {
+    display: none;
+}
+
+@media all and (max-width:968px) {
+    .nav {
+        &_diseño ul{
+            margin-right: 0px;
+            float: left;
+        }
+        &_logo {
+            padding-left: 30px;
+            width: 100%;
+        }
+        &_diseño ul li, &_diseño ul ul li {
+            display: block;
+            width: 100%;
+        }
+        &_diseño ul ul {
+            top: 70px;
+            position: static;
+            border-top: none;
+            float: none;
+            display: none;
+            opacity: 1;
+            visibility: visible;
+        }
+        &_diseño ul ul ul li {
+            position: static;
+        }
+        &_diseño ul ul li {
+            border-bottom: 0px;
+        }
+        &_diseño ul ul ul a {
+            padding-left: 80px;
+        }
+        &_media {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 0 20px;
+            line-height: 70px;
+            cursor: pointer;
+        }
+        &_media:hover {
+            color: #33ffff;
+        }
+        &_icon {
+            display: block;
+            color: #ffffff;
+            position: absolute;
+            right: 40px;
+            line-height: 70px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        &_media ul li a:hover {
+            box-shadow: none;
+        }
+        &media + a,ul {
+            display: none;
+        }
+        &_ajuste span {
+            padding-left: 0px;
+        }
+    }
+    .nav_media + a,ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+}

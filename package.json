@@ -244,5 +244,13 @@
     "yargs": "^17.5.1",
     "yargs-parser": "^20.2.9"
   },
-  "description": ""
+  "description": "<h1>Donde Isolina Coder House</h1>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gatuflo/dondeisolinadf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gatuflo/dondeisolinadf/issues"
+  },
+  "homepage": "https://github.com/Gatuflo/dondeisolinadf#readme"
 }

@@ -1,45 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;700&display=swap');
-
-@import "./misc/variables";
-// Utilidades = VARIABLES,  MIXIN, FUNCIONES
 @import "./misc/reset";
-//BASE = RESET, TIPOGRAFIAS
+/* reset */
 @import "./partials/header";
-@import "./partials/footer";
-//Partials = CODIGO PARTICIONADO DE CADA SECCION O PAGE
-
-@import "./pagns/home";
-//Pgns = contenido de cada pagina 
-
-/* media para tablet */
-@media (max-width:991px) {
-    .nav__label {
-        display: block;
-        cursor: pointer;
-        }
-
-    .nav__menu {
-        position: fixed;
-        top: 80px;
-        bottom: 0;
-        background: #f08080;
-        width: 100%;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
-    }
-}
-/* media para desktop */
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
-}
+/* header de las paginas */
+@import "./partials/nav";
+/* nav de las paginas */
